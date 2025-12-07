@@ -26,7 +26,14 @@ public class ApplePicker : MonoBehaviour
 
     public void AppleMissed()
     {
-        GameObject[] appleArray=GameObject.FindGameObjectsWithTag("Apple");
+        List<GameObject> appleList = new List<GameObject>();
+
+        appleList.AddRange(GameObject.FindGameObjectsWithTag("Apple"));
+        appleList.AddRange(GameObject.FindGameObjectsWithTag("Apple_Gold"));
+        appleList.AddRange(GameObject.FindGameObjectsWithTag("Apple_Poison"));
+
+        GameObject[] appleArray = appleList.ToArray();
+
         foreach (GameObject tempGO in appleArray)
         {
             Destroy(tempGO);
@@ -39,7 +46,7 @@ public class ApplePicker : MonoBehaviour
         Destroy(basketGO);
         if (basketList.Count == 0)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOverScreen");
         }
     }
 

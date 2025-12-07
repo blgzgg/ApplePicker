@@ -34,5 +34,20 @@ public class Basket : MonoBehaviour
             scoreCounter.score += 100;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
         }
+        else if (collidedWith.tag == "Apple_Gold")
+        {
+            Destroy(collidedWith);
+            scoreCounter.score += 500;
+            HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
+        }
+        else if (collidedWith.tag == "Apple_Poison")
+        {
+            Destroy(collidedWith);
+            scoreCounter.score -= 200;
+            if (scoreCounter.score < 0)
+            {
+                scoreCounter.score = 0;
+            }
+        }
     }
 }

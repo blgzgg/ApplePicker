@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Apple
+  - Apple_Gold
+  - Apple_Poison
   layers:
   - Default
   - TransparentFX

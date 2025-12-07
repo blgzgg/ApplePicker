@@ -370,6 +370,7 @@
 "Assets/AppleTree.cs"
 "Assets/Basket.cs"
 "Assets/HighScore.cs"
+"Assets/PoisonApple.cs"
 "Assets/SceneChanger.cs"
 "Assets/ScoreCounter.cs"
 -langversion:9.0
